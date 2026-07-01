@@ -206,7 +206,6 @@ with st.sidebar:
         "Choose up to 4 desk goals",
         options=[cell_label(desk) for desk in DESKS],
         default=[cell_label(DESKS[0])],
-        max_selections=4,
     )
     return_to_start = st.checkbox("Return to coffee machine", value=True)
     show_visited = st.checkbox("Show visited cells", value=True)
@@ -214,6 +213,9 @@ with st.sidebar:
 selected_goals = [
     desk for desk in DESKS if cell_label(desk) in selected_goal_labels
 ]
+if len(selected_goals) > 4:
+    st.sidebar.warning("Using the first 4 selected desk goals.")
+    selected_goals = selected_goals[:4]
 
 path, visited, failed_goal = build_route(selected_goals, return_to_start)
 visible_visited = visited if show_visited else []
