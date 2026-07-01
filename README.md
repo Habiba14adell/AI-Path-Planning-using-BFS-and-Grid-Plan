@@ -1,6 +1,6 @@
 # Cafe Robot Path Planning
 
-A Python/Pygame simulation for a cafe delivery robot. The robot moves through a grid-based cafe environment, avoids obstacles, and uses Breadth-First Search (BFS) to find paths to selected desk goals.
+A Python path planning project for a cafe delivery robot. The robot moves through a grid-based cafe environment, avoids obstacles, and uses Breadth-First Search (BFS) to find paths to selected desk goals.
 
 ## Features
 
@@ -9,12 +9,14 @@ A Python/Pygame simulation for a cafe delivery robot. The robot moves through a 
 - Interactive goal selection using mouse clicks
 - BFS path planning visualization
 - Robot movement animation along the generated path
+- Streamlit browser app for running the BFS planner without a Pygame window
 
 ## Project Structure
 
 ```text
 .
 +-- Environment.py       # Main application entry point
++-- app.py              # Streamlit browser app
 +-- Grids.py             # Grid, cells, states, colors, obstacles, and desks
 +-- Robots.py            # Robot behavior and BFS path planning
 +-- Generalisation.py    # Experimental/custom grid setup screen
@@ -62,18 +64,32 @@ pip install -r requirements.txt
 
 ## How to Run
 
-Run the main simulation:
+Run the Pygame simulation:
 
 ```bash
 python Environment.py
 ```
 
+Run the Streamlit app:
+
+```bash
+streamlit run app.py
+```
+
 ## How to Use
+
+Pygame version:
 
 - Click on red desk cells to choose delivery goals.
 - The robot starts from the coffee machine area.
 - The robot calculates a BFS path and moves toward the selected goal.
 - Close the Pygame window to stop the program.
+
+Streamlit version:
+
+- Choose up to four desk goals from the sidebar.
+- Toggle whether the robot should return to the coffee machine.
+- View the BFS route, visited cells, obstacles, desks, and goals in the browser.
 
 ## Notes
 
