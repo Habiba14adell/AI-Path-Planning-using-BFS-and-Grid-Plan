@@ -2,6 +2,14 @@
 
 A Python path planning project for a cafe delivery robot. The robot moves through a grid-based cafe environment, avoids obstacles, and uses Breadth-First Search (BFS) to find paths to selected desk goals.
 
+## Live Streamlit App
+
+Try the deployed browser version here:
+
+https://ai-path-planning-using-bfs-and-grid-plan-kcpgahfvezg2wqfy6yakm.streamlit.app/
+
+The deployed Streamlit app is a browser-friendly version of the BFS planner. It does not use Pygame, because Pygame opens a local desktop window and is not suitable for Streamlit Cloud deployment. Instead, `app.py` recreates the grid, controls, BFS search, visited cells, and route display with Streamlit components and HTML/CSS.
+
 ## Features
 
 - Grid-based cafe environment
@@ -104,7 +112,9 @@ Streamlit version:
 ## Notes
 
 - The project is designed for an AI planning/path planning assignment.
-- `runtime.txt` pins Streamlit Cloud to Python 3.11 so Pygame can install from a compatible wheel.
+- The Streamlit deployment uses `app.py` and `requirements.txt`; it does not install or run Pygame.
+- The original desktop project uses `Environment.py` with Pygame and can be run locally with `requirements-main.txt`.
+- `runtime.txt` pins Streamlit Cloud to Python 3.11 for a stable deployment environment.
 - `Generalisation.py` contains an alternate interface for manually choosing grid elements.
 
 ## License
