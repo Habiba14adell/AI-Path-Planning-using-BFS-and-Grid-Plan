@@ -34,8 +34,8 @@ A Python path planning project for a cafe delivery robot. The robot moves throug
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repository-name.git
-cd your-repository-name
+git clone https://github.com/Habiba14adell/AI-Path-Planning-using-BFS-and-Grid-Plan.git
+cd AI-Path-Planning-using-BFS-and-Grid-Plan
 ```
 
 2. Create and activate a virtual environment:
