@@ -20,7 +20,8 @@ A Python path planning project for a cafe delivery robot. The robot moves throug
 +-- Grids.py             # Grid, cells, states, colors, obstacles, and desks
 +-- Robots.py            # Robot behavior and BFS path planning
 +-- Generalisation.py    # Experimental/custom grid setup screen
-+-- requirements.txt     # Streamlit and Pygame dependencies
++-- requirements.txt     # Streamlit app dependencies
++-- requirements-main.txt # Pygame/main logic dependencies
 +-- runtime.txt          # Python version used by Streamlit Cloud
 +-- README.md
 ```
@@ -57,10 +58,18 @@ On macOS/Linux:
 source .venv/bin/activate
 ```
 
-3. Install dependencies:
+3. Install the dependencies for the version you want to run.
+
+For the Streamlit browser app:
 
 ```bash
 pip install -r requirements.txt
+```
+
+For the Pygame/main logic version:
+
+```bash
+pip install -r requirements-main.txt
 ```
 
 ## How to Run
